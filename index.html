@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- import css -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="correct.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Import Font Awesome -->
+    <link rel="stylesheet" href="fontawesome-pro-5.15.1-web/css/all.css">
+    <link rel="stylesheet" href="fontawesome-pro-5.15.1-web/css/fontawesome.css">
+    <!-- Import Javascript Document -->
+    <script src="app.js"></script>
+    <script src="main.js"></script>
+    <script src="simple.js"></script>
+</head>
+<body>
+    <main class="profile-page">
+        <!-- Trend Section -->
+        <section class="trend-section">
+            <div class="logo"><span>B</span> <p>Bubbles</p></div>
+            <div class="trend">
+                <div class="card">
+                    <li><p>most trending</p> <i class="far fa-angle-down"></i></li>
+                    <li>#travel</li>
+                    <li>#travelphotography</li>
+                    <li>#travelgram</li>
+                    <li>#bakery</li>
+                    <li>Show More</li>
+                </div>
+                <div class="card">
+                    <li><p>Active Groups </p><i class="far fa-angle-down"></i></li>
+                    <li>NACOSS 400Level</li>
+                    <li>GDSC IMSU</li>
+                    <li>Designers Hub</li>
+                    <li>Blockchain Imsu</li>
+                    <li>Show more</li>
+                </div>
+            </div>
+        </section>
+        <!-- Trend Section End -->
+        <!-- Main Post Section -->
+        <section class="post-section">
+            <div class="top-most">
+                <i class="far fa-arrow-left" onclick="history.back()"></i>
+                <span>
+                    <h4>Joshua Nwaogo</h4>
+                </span>
+                <i class="far fa-ellipsis-v"></i>
+            </div>
+            <div class="scroll">
+                <div class="card user-card">
+                    <div class="top-part">
+                        <div class="cover-photo">
+                            <img src="img/5293c76d8ccc758cb7c7cf3117d42996.webp" alt="">
+                        </div>
+                        <div class="profile-photo">
+                            <div class="usp">
+                                <img src="img/red_angry_bird_by_scooterek-d4hy5b4.jpg" alt="">
+                            </div>
+                            <p class="at">@angrybird <i class="fas fa-badge-check t-blue"></i></p>
+                            <div class="numbers">
+                                <div class="tab">
+                                    <h5>1025</h5>
+                                    <p>Posts</p>
+                                </div>
+                                <div class="tab">
+                                    <h5>43.5M</h5>
+                                    <p>Followers</p>
+                                </div>
+                                <div class="tab">
+                                    <h5>09</h5>
+                                    <p>Following</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user-details">
+                        <div class="buttons">
+                            <div class="btn">Message</div>
+                            <div class="btn"><i class="far fa-user-check"></i></div>
+                        </div>
+                        <p class="bio">Vawulence</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="top">
+                        <div class="user-info">
+                            <div class="usp">
+                                <img src="img/red_angry_bird_by_scooterek-d4hy5b4.jpg" alt="">
+                            </div>
+                            <div class="txt">
+                                <p class="user">Joshua Nwaogo</p>
+                                <p class="info">@angrybird . 1m ago</p>
+                            </div>
+                        </div>  
+                        <div class="menu">
+                            <div class="far fa-user-plus" onclick="follow(this)"></div>
+                            <div class="far fa-ellipsis-v" onclick="showPop()"></div>
+                        </div>
+                    </div>
+                    <div class="body has-pic">
+                        <p>The strong shall choke the weak &#128514;&#128514;&#128514;</p>
+                        <div class="pictures">
+                            <div class="slide-post">
+                                <div class="pic"><img src="img/5293c76d8ccc758cb7c7cf3117d42996.webp" alt=""></div>
+                                <div class="pic"><img src="img/harry-potter_4x.webp" alt=""></div>
+                                <div class="pic"><img src="img/8837a0ae1265548e27a2b2bb3ab1f366.webp" alt=""></div>
+                                <div class="pic"><img src="img/92507bdcf4b5edfa12d5e9cc4f01b301.webp" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="engagement">
+                        <li onclick="linkTo('post-view.html')"><i class="far fa-comment-alt"></i> <p>22k</p></li>
+                        <li><i class="far fa-arrow-up"></i> <p>1m</p></li>
+                        <li><i class="far fa-arrow-down"></i> <p>55</p></li>
+                        <li onclick="showPop1()"><i class="far fa-share-alt"></i> <p>5k</p></li>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="top">
+                        <div class="user-info">
+                            <div class="usp">
+                                <img src="img/1653698915114.jpg" alt="">
+                            </div>
+                            <div class="txt">
+                                <p class="user">NFT Lauren</p>
+                                <p class="info">@laurenalien . 2days ago</p>
+                            </div>
+                        </div>  
+                        <div class="menu">
+                            <div class="far fa-user-plus" onclick="follow(this)"></div>
+                            <div class="far fa-ellipsis-v" onclick="showPop()"></div>
+                        </div>
+                    </div>
+                    <div class="body has-pic">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, beatae non sit in nihil atque hic labore mollitia dignissimos, assumenda, provident eius. Error dolore architecto voluptates earum non voluptatem nihil in. Voluptatibus asperiores tempore animi cupiditate voluptates porro quidem temporibus?</p>
+                        <div class="pictures">
+                            <div class="slide-post">
+                                <div class="pic"><img src="img/harry-potter_4x.webp" alt=""></div>
+                                <div class="pic"><img src="img/8837a0ae1265548e27a2b2bb3ab1f366.webp" alt=""></div>
+                                <div class="pic"><img src="img/92507bdcf4b5edfa12d5e9cc4f01b301.webp" alt=""></div>
+                                <div class="pic"><img src="img/5293c76d8ccc758cb7c7cf3117d42996.webp" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="engagement">
+                        <li><i class="far fa-comment-alt"></i> <p>104</p></li>
+                        <li><i class="far fa-arrow-up"></i> <p>10k</p></li>
+                        <li><i class="far fa-arrow-down"></i> <p>2k</p></li>
+                        <li onclick="showPop1()"><i class="far fa-share-alt"></i> <p>20</p></li>
+                    </div>
+                    
+                </div>
+                <div class="card" id="frosh">
+                    <div class="top">
+                        <div class="user-info">
+                            <div class="usp">
+                                <img src="img/14eaca777373dddd03956751a7759252.webp" alt="">
+                            </div>
+                            <div class="txt">
+                                <p class="user">Frosh Weirdo</p>
+                                <p class="info">@froshvibes . 1m ago</p>
+                            </div>
+                        </div>  
+                        <div class="menu">
+                            <div class="far fa-user-plus" onclick="follow(this)"></div>
+                            <div class="far fa-ellipsis-v" onclick="showPop()"></div>
+                        </div>
+                    </div>
+                    <div class="body has-pic">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, beatae non sit in nihil atque hic labore mollitia dignissimos, assumenda, provident eius. Error dolore architecto voluptates earum non voluptatem nihil in. Voluptatibus asperiores tempore animi cupiditate voluptates porro quidem temporibus?</p>
+                        <div class="pictures">
+                            <div class="slide-post">
+                                <div class="pic"><img src="img/pic4.jpg" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="engagement">
+                        <li><i class="far fa-comment-alt"></i> <p>33</p></li>
+                        <li><i class="far fa-arrow-up"></i> <p>1k</p></li>
+                        <li><i class="far fa-arrow-down"></i> <p>8</p></li>
+                        <li onclick="showPop1()"><i class="far fa-share-alt"></i> <p>20</p></li>
+                    </div>
+                    
+                </div>
+                <div class="card">
+                    <div class="top">
+                        <div class="user-info">
+                            <div class="usp">
+                                <img src="img/92507bdcf4b5edfa12d5e9cc4f01b301.webp" alt="">
+                            </div>
+                            <div class="txt">
+                                <p class="user">Loco Samuel</p>
+                                <p class="info">@locoskp . 1m ago</p>
+                            </div>
+                        </div>  
+                        <div class="menu">
+                            <div class="far fa-user-plus" onclick="follow(this)"></div>
+                            <div class="far fa-ellipsis-v" onclick="showPop()"></div>
+                        </div>
+                    </div>
+                    <div class="body has-pic">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, beatae non sit in nihil atque hic labore mollitia dignissimos, assumenda, provident eius. Error dolore architecto voluptates earum non voluptatem nihil in. Voluptatibus asperiores tempore animi cupiditate voluptates porro quidem temporibus?</p>
+                        <div class="pictures">
+                            <div class="slide-post">
+                                <div class="pic"><img src="img/Untitled38_20220411163338.png" alt=""></div>
+                                <div class="pic"><img src="img/Untitled38_20220411163613.png" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="engagement">
+                        <li><i class="far fa-comment-alt"></i> <p>104</p></li>
+                        <li><i class="far fa-arrow-up"></i> <p>10k</p></li>
+                        <li><i class="far fa-arrow-down"></i> <p>2k</p></li>
+                        <li onclick="showPop1()"><i class="far fa-share-alt"></i> <p>20</p></li>
+                    </div>
+                    
+                </div>
+                <div class="card">
+                    <div class="top">
+                        <div class="user-info">
+                            <div class="usp">
+                                <img src="img/4POimDrS_400x400.jpg" alt="">
+                            </div>
+                            <div class="txt">
+                                <p class="user">Queen Helen</p>
+                                <p class="info">@cryptodoyen . 1m ago</p>
+                            </div>
+                        </div>  
+                        <div class="menu">
+                            <div class="far fa-user-plus" onclick="follow(this)"></div>
+                            <div class="far fa-ellipsis-v" onclick="showPop()"></div>
+                        </div>
+                    </div>
+                    <div class="body has-pic">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, beatae non sit in nihil atque hic labore mollitia dignissimos, assumenda, provident eius. Error dolore architecto voluptates earum non voluptatem nihil in. Voluptatibus asperiores tempore animi cupiditate voluptates porro quidem temporibus?</p>
+                        <div class="pictures">
+                            <div class="slide-post">
+                                <div class="pic"><img src="img/8837a0ae1265548e27a2b2bb3ab1f366.webp" alt=""></div>
+                                <div class="pic"><img src="img/14eaca777373dddd03956751a7759252.webp" alt=""></div>
+                                <div class="pic"><img src="img/14eaca777373dddd03956751a7759252.webp" alt=""></div>
+                                <div class="pic"><img src="img/5293c76d8ccc758cb7c7cf3117d42996.webp" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="engagement">
+                        <li><i class="far fa-comment-alt"></i> <p>104</p></li>
+                        <li><i class="far fa-arrow-up"></i> <p>10k</p></li>
+                        <li><i class="far fa-arrow-down"></i> <p>2k</p></li>
+                        <li onclick="showPop1()"><i class="far fa-share-alt"></i> <p>20</p></li>
+                    </div>
+                    
+                </div>
+                <center><p class="fa-sm" style="font-size: .7rem; padding: 10px;"><b>You've Reach the end...</b></p></center>
+            </div>
+        </section>
+        <!-- Main Post Section -->
+
+
+        <!-- Continue here -->
+        <section class="comment-section gen">
+            <div class="top">
+                <div class="search">
+                    <i class="fal fa-search"></i>
+                    <input type="search" name="" id="" placeholder="Search">
+                </div>
+            </div>
+            <div class="body">
+                <!-- You Might Like Section Before actual search -->
+                <div class="yml">
+                    <h3>You might like</h3>
+                    <li>
+                        <div class="usp">
+                            <img src="img/1653698915114.jpg" alt="">
+                        </div>
+                        <div class="yml-txt">
+                            <span>
+                                <h5>NFT Lauren</h5>
+                            </span>
+                            <p>@laurenalien</p>
+                        </div>
+                        <div class="btn">follow</div>
+                    </li>
+                    <li>
+                        <div class="usp">
+                            <img src="img/4POimDrS_400x400.jpg" alt="">
+                        </div>
+                        <div class="yml-txt">
+                            <span>
+                                <h5>Queen Helen</h5>
+                                <i class="fas fa-badge-check"></i>
+                            </span>
+                            <p>@cryptodoyen</p>
+                        </div>
+                        <div class="btn">follow</div>
+                    </li>
+                    <li>
+                        <div class="usp">
+                            <img src="img/red_angry_bird_by_scooterek-d4hy5b4.jpg" alt="">
+                        </div>
+                        <div class="yml-txt">
+                            <span>
+                                <h5>Joshua Nwaogo</h5>
+                                <i class="fas fa-badge-check"></i>
+                            </span>
+                            <p>@angrybird</p>
+                        </div>
+                        <div class="btn">follow</div>
+                    </li>
+                    <li>
+                        <p class="t-blue">Show more</p>
+                    </li>
+                </div>
+                <div class="yml">
+                    <h3>People you may know</h3>
+                    <li>
+                        <div class="usp">
+                            <img src="img/1653698915114.jpg" alt="">
+                        </div>
+                        <div class="yml-txt">
+                            <span>
+                                <h5>NFT Lauren</h5>
+                            </span>
+                            <p>@laurenalien</p>
+                        </div>
+                        <div class="btn">follow</div>
+                    </li>
+                    <li>
+                        <div class="usp">
+                            <img src="img/4POimDrS_400x400.jpg" alt="">
+                        </div>
+                        <div class="yml-txt">
+                            <span>
+                                <h5>Queen Helen</h5>
+                                <i class="fas fa-badge-check"></i>
+                            </span>
+                            <p>@cryptodoyen</p>
+                        </div>
+                        <div class="btn">follow</div>
+                    </li>
+                    <li>
+                        <div class="usp">
+                            <img src="img/92507bdcf4b5edfa12d5e9cc4f01b301.webp" alt="">
+                        </div>
+                        <div class="yml-txt">
+                            <span>
+                                <h5>Loco Sammuel</h5>
+                                <i class="fas fa-badge-check"></i>
+                            </span>
+                            <p>@locoskp</p>
+                        </div>
+                        <div class="btn">follow</div>
+                    </li>
+                    <li>
+                        <div class="usp">
+                            <img src="img/red_angry_bird_by_scooterek-d4hy5b4.jpg" alt="">
+                        </div>
+                        <div class="yml-txt">
+                            <span>
+                                <h5>Joshua Nwaogo</h5>
+                                <i class="fas fa-badge-check"></i>
+                            </span>
+                            <p>@angrybird</p>
+                        </div>
+                        <div class="btn">follow</div>
+                    </li>
+                    <li>
+                        <p class="t-blue">Show more</p>
+                    </li>
+                </div>
+
+                <!-- During Actual Search -->
+                <!-- <div class="search-list">
+                    <li>
+                        <div class="usp">
+                            <img src="img/1653698915114.jpg" alt="">
+                        </div>
+                        <div class="yml-txt">
+                            <span>
+                                <h5>NFT Lauren</h5>
+                            </span>
+                            <p>@laurenalien</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="usp">
+                            <img src="img/1653698915114.jpg" alt="">
+                        </div>
+                        <div class="yml-txt">
+                            <span>
+                                <h5>NFT Lauren</h5>
+                            </span>
+                            <p>@laurenalien</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="usp">
+                            <img src="img/1653698915114.jpg" alt="">
+                        </div>
+                        <div class="yml-txt">
+                            <span>
+                                <h5>NFT Lauren</h5>
+                            </span>
+                            <p>@laurenalien</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="usp">
+                            <img src="img/1653698915114.jpg" alt="">
+                        </div>
+                        <div class="yml-txt">
+                            <span>
+                                <h5>NFT Lauren</h5>
+                            </span>
+                            <p>@laurenalien</p>
+                        </div>
+                    </li>
+                </div> -->
+            </div>  
+        </section>
+
+        <!-- When Post image is clicked -->
+        <!-- <div class="slide">
+            <div class="guide">
+                <i class="far fa-lg fa-times cans"></i>
+                <div class="slide-boxes">
+                    <div class="slide-box">
+                        <img src="img/FG_WfgKVIAEtAGI.jpg" alt="">
+                    </div>
+                    <div class="slide-box"></div>
+                    <div class="slide-box"></div>
+                </div>
+                <div class="engagement">
+                    <li><i class="far fa-comment-alt"></i> <p>104</p></li>
+                    <li><i class="far fa-arrow-up"></i> <p>10k</p></li>
+                    <li><i class="far fa-arrow-down"></i> <p>2k</p></li>
+                    <li><i class="far fa-share-alt"></i> <p>20</p></li>
+                </div>
+            </div>
+            <div class="slide-nav">
+                <i class="far fa-lg fa-angle-left" onclick="test()"></i>
+                <i class="far fa-lg fa-angle-right"></i>
+            </div>
+        </div> -->
+
+        <!-- <div class="slide">
+            <div class="guide">
+                <i class="far fa-lg fa-times cans"></i>
+                <div class="import-box">
+                    <div class="photo">
+                        <div class="pick-img">
+                            <div class="img-tray" id="hold">
+
+                            </div>
+                            <input type="file" name="" id="import-pic">
+                            <i class="fa fa-camera-alt" id="ico"></i>
+                        </div>
+                    </div>
+                    <p>Click to Pick photo</p>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- <div class="alert" id="alert">
+            <div class="shell">
+                <div class="alert-title">
+                    Block User ("Rue <i class="fa fa-heart t-pink"></i>")
+                </div>
+                <div class="alert-body">
+                    Are your sure you want to block Her? 
+                </div>
+                <div class="buttom">
+                    <div class="btn t-blue" id="bt-good">Cancel</div>
+                    <div class="btn t-red" id="bt-bad">proceed</div>
+                </div>
+            </div>
+        </div> -->
+
+        
+    <div class="hide" id="pop1">
+        <div class="pop-back">
+            <div class="pop" id="pop-share">
+                <li>
+                    <i class="far fa-envelope"></i>
+                    <p>Send via Direct Message</p>
+                </li>
+                <li>
+                    <i class="far fa-bookmark"></i>
+                    <p>Bookmark</p>
+                </li>
+                <li>
+                    <i class="far fa-link"></i>
+                    <p>Copy Post Link</p>
+                </li>
+                <li class="btn"><p onclick="hidePop1()">Cancel</p></li>
+            </div>
+        </div>
+    </div>
+    <div class="hide" id="pop2">
+        <div class="pop-back">
+            <div class="pop popUp" id="pop-sm">
+                <li>
+                    <i class="far fa-meh"></i>
+                    <p>Not Interested in this post</p>
+                </li>
+                <li>
+                    <i class="far fa-user-times"></i>
+                    <p>Unfollow @NFT Lauren</p>
+                </li>
+                <li>
+                    <i class="far fa-volume-mute"></i>
+                    <p>Mute @NFT Lauren</p>
+                </li>
+                <li>
+                    <i class="far fa-ban"></i>
+                    <p>Block @NFT Lauren</p>
+                </li>
+                <li>
+                    <i class="far fa-flag-alt"></i>
+                    <p>Report this Post</p>
+                </li>
+                <li class="btn"><p onclick="hidePop()">Cancel</p></li>
+            </div>
+        </div>
+    </div>
+    </main>
+    <script>
+        
+
+        var importPic = document.getElementById('import-pic');
+        function checkPic() {
+            var holder = document.getElementById('hold');
+            var ico = document.getElementById('ico');
+            var txt = "";
+            if ('files' in importPic) {
+                if (importPic.files.length != 0) {
+                    for (var index = 0; index < importPic.files.length; index++) {
+                        var pic = importPic.files[index];
+                        if ('name' in pic) {
+                            txt += pic.name;
+                        }
+                    }
+                }
+            }
+
+            if (txt.length > 0) {
+                ico.style.display = "none";
+                var previewImage = document.createElement('img');
+                previewImage.src = 'img/'+txt;
+                holder.appendChild(previewImage);
+            }
+            // alert(txt);
+        }
+        importPic.addEventListener("change", ()=>{
+                checkPic();
+        })
+    </script>
+</body>
+</html>
