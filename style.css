@@ -4377,18 +4377,18 @@ i{
 /* Post Page toggle Live & Create */
 @keyframes create-post {
     from{
-        margin-left: 7.5rem;
+        margin-left: 18%;
     }   
     to{
-        margin-left: 39.5rem;
+        margin-left: 84%;
     }
 }
 @keyframes create-live {
     from{
-        margin-left: 39.5rem;
+        margin-left: 84%;
     }   
     to{
-        margin-left: 7.5rem;
+        margin-left: 18%;
     }
 }
 
