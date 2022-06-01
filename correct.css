@@ -1,0 +1,124 @@
+.case{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+}
+.top-logo{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+.top-logo i{
+    padding: 0 5px;
+    cursor: pointer;
+}
+/* Post Page (Trend Section) */
+.profile-page .trend-section{
+    width: 20rem;
+    display: grid;
+    grid-template-rows: .08fr 1fr;
+    gap: 10px;
+}
+.profile-page .trend-section .contain::-webkit-scrollbar{
+    display: none;
+}
+.profile-page .trend-section .contain{
+    background-color: var(--white);
+    overflow-y: auto;
+    height: 90vh;
+}
+
+.profile-page .trend-section .card{
+    width: 100%;
+    background-color: var(--white);
+    list-style: none;
+    transition: .5s ease-in-out;
+    display: grid;
+    font-size: .9rem;
+    border-radius: .5rem;
+}
+
+.profile-page .trend-section .card-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0;
+}
+.profile-page .trend-section .card h4{
+    font-family: var(--bold-font);
+    padding: 10px 10px 5px 10px;
+}
+.profile-page .trend-section .card li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: .4rem;
+}
+.profile-page .trend-section .card li .usp{
+    height: 3rem;
+    border: 1px solid var(--light-gray);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 3rem;
+}
+.profile-page .trend-section .card li .usp img{
+    width: 130%;
+}
+.profile-page .trend-section .card li .content{
+    font-size: .8rem;
+    display: grid;
+    gap: 5px;
+    padding: 5px 0;
+    flex: 1;
+}
+.profile-page .trend-section .card li .content span{
+    color: var(--gray);
+}
+.profile-page .trend-section .card li .content .react{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.profile-page .trend-section .card li .state{
+    padding: 5px 15px;
+    border-radius: .25rem;
+    text-transform: capitalize;
+    font-size: small;
+    cursor: pointer;
+}
+.profile-page .trend-section .card li .has-pic{
+    height: 3rem;
+    width: 3rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profile-page .trend-section .card li .has-pic img{
+    width: 100%;
+}
+.profile-page .trend-section .card li .no-follow{
+    color: var(--white);
+    background-color: var(--blue);
+}
+.profile-page .trend-section .card li .follow{
+    color: var(--black);
+    border: 1px solid var(--light-gray);
+}
+
+.profile-page .trend-section .card li .content .react i:hover{
+    color: var(--red);
+    cursor: pointer;
+    font-weight: 900;
+}
+/* Post Page (Trend Section) End*/
+
