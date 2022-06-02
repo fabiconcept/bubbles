@@ -17,6 +17,10 @@
 </head>
 <body>
     <main class="comment-page">
+        <div class="mode">
+            <i class="fal fa-lg fa-moon" onclick="manual_Switch()" id="sw-ico"></i>
+            <i class="fal fa-lg fa-square" onclick="fullScreen()"></i>
+        </div>
         <section class="comment-section" style="display: block;">
             <!-- Top Navigation -->
             <div class="top">
@@ -39,12 +43,9 @@
                                 </div>
                             </div>  
                             <div class="menu">
-                                <div id="trig" class="far fa-ellipsis-v el"></div>
-                                <div class="drop-txt" id="drop-txt">
-                                    <li><i class="fal fa-user-slash"></i>Block User</li>
-                                    <li><i class="fal fa-eye-slash"></i>Hide Post</li>
-                                    <li><i class="fas fa-flag"></i>Report Post</li>
-                                    <li><i class="fal fa-ban"></i>Report User</li>
+                                <div class="far fa-user-plus" onclick="follow(this)"></div>
+                                <div class="mb">
+                                    <div class="far fa-ellipsis-v" onclick="showPop();"></div>
                                 </div>
                             </div>
                         </div>
@@ -277,17 +278,7 @@
         document.getElementById('goCom').addEventListener('click', ()=>{
             document.getElementById('com').focus();
         })
-        document.getElementById('trig').addEventListener('click', ()=>{
-            var div = document.getElementById('drop-txt');
-            if (con == 0) {
-                div.style.display = "grid";
-                con++;
-            }else{
-                div.style.display = "none";
-                con = 0;
-            }
-            
-        })
+        
     </script>
 </body>
 </html>

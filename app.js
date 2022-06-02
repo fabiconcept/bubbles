@@ -1,13 +1,21 @@
 // Detect Darkmode
+var currmode = false;
+var currState = 0;
+var count = 0;
+var con = 0;
 var root = document.querySelector(':root');
 var rootColors = getComputedStyle(root);
 // Set Dark mode
 setInterval(() => {
     let dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    if (dark) {
-        isDark(); 
-    }else{
-        isLight();
+    if (currmode == false) {
+        if (dark) {
+            isDark(); 
+            currState = 1;
+        }else{
+            isLight();
+            currState = 0;
+        }
     }
 }, 500);
 
@@ -33,6 +41,7 @@ function isLight() {
     root.style.setProperty("--light-gray", "#e2e2e2");
     root.style.setProperty("--tab-cover", "rgba(247, 244, 244, 0.436)");
 }
+
 
 // Toggle 'toggle-btn'
 
@@ -123,11 +132,6 @@ function close(params) {
     var div = document.getElementById(params);
     div.style.display = "none";
 }
-
-
-// Animate on reply click
-// Yet to achieve
-
 
 // Goto chat section
 
@@ -373,14 +377,63 @@ getParameters = (key) =>{
     return parameterList.get(key);
 }
 
-// if (getParameters('show')=='search') {
-//    var trend = document.getElementById('sec-tre');
-//    var poster = document.getElementById('sec-post');
-//    var finder = document.getElementById('sec-find');
+function activate(ele) {
+    if (ele.requestFullscreen) {
+        ele.requestFullscreen();
+    }
+}
 
-//    alert(poster);
+function deactivate(ele) {
+    if (document.exitFullscreen) {
+        document.exitFullscreen();
+    }
+}
 
-//    trend.style.display = "none";
-//    poster.style.display = "none";
-// }
+function fullScreen() {
+    if (count==0) {
+        activate(document.documentElement);
+    }else{
+        deactivate()
+        count = 0;
+    }
+    count++;
+}
 
+function toggle_menu(params) {
+    var div = params.firstElementChild;
+    if (con == 0) {
+        div.style.display = "grid";
+        con++;
+    }else{
+        div.style.display = "none";
+        con = 0;
+    }
+}
+
+function linkGen(params) {
+    if (onDevice !="mobile") {
+        setTimeout(() => {
+            location.href = params;
+        }, 200);
+    }
+}
+
+function manual_Switch() {
+    var ico = document.getElementById("sw-ico");
+    if (currState == 0) {
+        if (ico.classList.contains("fa-sun")) {
+            ico.classList.replace("fa-sun", "fa-moon");
+        }else{
+            ico.classList.replace("fa-moon", "fa-sun");
+        }
+        isDark()
+    }else{
+        if (ico.classList.contains("fa-moon")) {
+            ico.classList.replace("fa-moon", "fa-sun");
+        }else{
+            ico.classList.replace("fa-sun", "fa-moon");
+        }
+        isLight()
+    }
+    currmode = !currmode;
+}

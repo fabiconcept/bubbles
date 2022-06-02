@@ -14,18 +14,17 @@
     <!-- Import Javascript Document -->
     <script src="app.js"></script>
     <script src="main.js"></script>
-    <script src="simple.js"></script>
 </head>
 <body>
-    <!-- Backgroud Animation Div -->
-
+<!-- Top Logo Part -->
     <div class="case">
         <div class="top-logo">
             <div class="logo"><span>B</span> <p>ubbles</p></div>
-            <i class="fad fa-user" onclick="linkTo('active-user.html')"></i>
+            <i class="fad fa-user" onclick="linkTo('active-user.html'); linkGen('active-user.html')"></i>
         </div>
     </div>
 
+    <!-- Main Page Area -->
     <main class="post-page post-page-hm" id="post-page">
         <!-- Trend Section -->
         <section class="trend-section" id="sec-tre">
@@ -167,6 +166,12 @@
         <!-- Trend Section End -->
         <!-- Main Post Section -->
         <section class="post-section" id="sec-up">
+            <!-- Floating Ball -->
+            <div class="mode">
+                <i class="fal fa-lg fa-moon" onclick="manual_Switch()" id="sw-ico"></i>
+                <i class="fal fa-lg fa-square" onclick="fullScreen()"></i>
+            </div>
+            <!-- Post Section Navigation Mobile Only -->
             <div class="hold mb">
                 <div class="top-most">
                     <div id='t-post'onclick='moveTab(1); linkTo("home.html"); linkToTb("none")' class="tab active"><i class="far fa-home" onclick=""></i> <p>Posts</p></div>
@@ -175,20 +180,25 @@
                     <div id='t-chat' onclick="moveTab(3); linkTo('chat.html')" class="tab"><i class="far fa-comment-alt-dots" onclick=""></i> <p>Chat</p></div>
                 </div>
             </div>
+            <!-- Post Section Navigation Desktop Only -->
             <div class="hold dk">
                 <div class="top-most">
-                    <div id='t-post'onclick='moveTab(1); linkTo("home.html"); linkToTb("none")' class="tab active"><i class="far fa-home" onclick=""></i> <p>Posts</p></div>
+                    <div id='t-post'onclick='moveTab(1); linkGen("home.html"); linkToTb("none")' class="tab active"><i class="far fa-home" onclick=""></i> <p>Posts</p></div>
+                    <div id='t-chat' onclick="moveTab(3); linkGen('chat.html')" class="tab"><i class="far fa-comment-alt-dots" onclick=""></i> <p>Chat</p></div>
                 </div>
             </div>
+            <!-- Post Section Navigation Tablet Only -->
             <div class="hold tb">
                 <div class="top-most">
                     <div id='t-post'onclick='moveTab(1); linkTo("home.html"); linkToTb("none")' class="tab active"><i class="far fa-home" onclick=""></i> <p>Posts</p></div>
                     <div id='t-follow' onclick="moveTab(2); linkTo('home.html?show=search'); linkToTb('activity')" class="tab mb"><i class="far fa-search" onclick=""></i> <p>Discover</p></div>
                     <div id='t-user' onclick='moveTab(4); linkTo("home.html?show=activity"); linkToTb("search")' class="tab"><i class="far fa-bell-exclamation"></i> <p>Notification</p></div>
-                    <div id='t-chat' onclick="moveTab(3); linkTo('chat.html')" class="tab"><i class="far fa-comment-alt-dots" onclick=""></i> <p>Chat</p></div>
+                    <div id='t-chat' onclick="moveTab(3); linkGen('chat.html')" class="tab"><i class="far fa-comment-alt-dots" onclick=""></i> <p>Chat</p></div>
                 </div>
             </div>
+            <!-- Post Section Post Scroll Hold -->
             <div class="scroll" id="sec-post">
+                <!-- First Card for Creating Post -->
                 <div class="card create-post">
                     <div class="topper">
                         <span  onclick="move(1)"><i class="fa fa-pen" id="crp"></i>Create post</span>
@@ -210,6 +220,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- User Post 001 -->
                 <div class="card">
                     <div class="top">
                         <div class="user-info">
@@ -217,13 +228,39 @@
                                 <img src="img/red_angry_bird_by_scooterek-d4hy5b4.jpg" alt="">
                             </div>
                             <div class="txt">
-                                <p class="user" onclick="linkTo('index.html')">Joshua Nwaogo</p>
+                                <p class="user" onclick="linkTo('index.html'); linkGen('index.html')">Joshua Nwaogo</p>
                                 <p class="info">@angrybird . 1m ago</p>
                             </div>
                         </div>  
                         <div class="menu">
                             <div class="far fa-user-plus" onclick="follow(this)"></div>
-                            <div class="far fa-ellipsis-v" onclick="showPop()"></div>
+                            <div class="dk">
+                                <div class="far fa-ellipsis-v" onclick="showPop(); toggle_menu(this)">
+                                    <div class="pop-dk dk" id="drop-txt">
+                                        <div class="drop-txt">
+                                            <li><i class="fal fa-user-slash"></i>Block User</li>
+                                            <li><i class="fal fa-eye-slash"></i>Hide Post</li>
+                                            <li><i class="fas fa-flag"></i>Report Post</li>
+                                            <li><i class="fal fa-ban"></i>Report User</li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb">
+                                <div class="far fa-ellipsis-v" onclick="showPop();"></div>
+                            </div>
+                            <div class="tb">
+                                <div class="far fa-ellipsis-v" onclick="showPop(); toggle_menu(this)">
+                                    <div class="pop-dk dk" id="drop-txt">
+                                        <div class="drop-txt">
+                                            <li><i class="fal fa-user-slash"></i>Block User</li>
+                                            <li><i class="fal fa-eye-slash"></i>Hide Post</li>
+                                            <li><i class="fas fa-flag"></i>Report Post</li>
+                                            <li><i class="fal fa-ban"></i>Report User</li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="body">
@@ -252,6 +289,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- User Post 002 -->
                 <div class="card">
                     <div class="top">
                         <div class="user-info">
@@ -265,7 +303,33 @@
                         </div>  
                         <div class="menu">
                             <div class="far fa-user-plus" onclick="follow(this)"></div>
-                            <div class="far fa-ellipsis-v" onclick="showPop()"></div>
+                            <div class="dk">
+                                <div class="far fa-ellipsis-v" onclick="showPop(); toggle_menu(this)">
+                                    <div class="pop-dk dk" id="drop-txt">
+                                        <div class="drop-txt">
+                                            <li><i class="fal fa-user-slash"></i>Block User</li>
+                                            <li><i class="fal fa-eye-slash"></i>Hide Post</li>
+                                            <li><i class="fas fa-flag"></i>Report Post</li>
+                                            <li><i class="fal fa-ban"></i>Report User</li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb">
+                                <div class="far fa-ellipsis-v" onclick="showPop();"></div>
+                            </div>
+                            <div class="tb">
+                                <div class="far fa-ellipsis-v" onclick="showPop(); toggle_menu(this)">
+                                    <div class="pop-dk dk" id="drop-txt">
+                                        <div class="drop-txt">
+                                            <li><i class="fal fa-user-slash"></i>Block User</li>
+                                            <li><i class="fal fa-eye-slash"></i>Hide Post</li>
+                                            <li><i class="fas fa-flag"></i>Report Post</li>
+                                            <li><i class="fal fa-ban"></i>Report User</li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="body has-pic">
@@ -300,6 +364,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- User Post 003 -->
                 <div class="card" id="frosh">
                     <div class="top">
                         <div class="user-info">
@@ -313,7 +378,33 @@
                         </div>  
                         <div class="menu">
                             <div class="far fa-user-plus" onclick="follow(this)"></div>
-                            <div class="far fa-ellipsis-v" onclick="showPop()"></div>
+                            <div class="dk">
+                                <div class="far fa-ellipsis-v" onclick="showPop(); toggle_menu(this)">
+                                    <div class="pop-dk dk" id="drop-txt">
+                                        <div class="drop-txt">
+                                            <li><i class="fal fa-user-slash"></i>Block User</li>
+                                            <li><i class="fal fa-eye-slash"></i>Hide Post</li>
+                                            <li><i class="fas fa-flag"></i>Report Post</li>
+                                            <li><i class="fal fa-ban"></i>Report User</li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb">
+                                <div class="far fa-ellipsis-v" onclick="showPop();"></div>
+                            </div>
+                            <div class="tb">
+                                <div class="far fa-ellipsis-v" onclick="showPop(); toggle_menu(this)">
+                                    <div class="pop-dk dk" id="drop-txt">
+                                        <div class="drop-txt">
+                                            <li><i class="fal fa-user-slash"></i>Block User</li>
+                                            <li><i class="fal fa-eye-slash"></i>Hide Post</li>
+                                            <li><i class="fas fa-flag"></i>Report Post</li>
+                                            <li><i class="fal fa-ban"></i>Report User</li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="body has-pic">
@@ -345,6 +436,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- User Post 004 -->
                 <div class="card">
                     <div class="top">
                         <div class="user-info">
@@ -358,7 +450,33 @@
                         </div>  
                         <div class="menu">
                             <div class="far fa-user-plus" onclick="follow(this)"></div>
-                            <div class="far fa-ellipsis-v" onclick="showPop()"></div>
+                            <div class="dk">
+                                <div class="far fa-ellipsis-v" onclick="showPop(); toggle_menu(this)">
+                                    <div class="pop-dk dk" id="drop-txt">
+                                        <div class="drop-txt">
+                                            <li><i class="fal fa-user-slash"></i>Block User</li>
+                                            <li><i class="fal fa-eye-slash"></i>Hide Post</li>
+                                            <li><i class="fas fa-flag"></i>Report Post</li>
+                                            <li><i class="fal fa-ban"></i>Report User</li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb">
+                                <div class="far fa-ellipsis-v" onclick="showPop();"></div>
+                            </div>
+                            <div class="tb">
+                                <div class="far fa-ellipsis-v" onclick="showPop(); toggle_menu(this)">
+                                    <div class="pop-dk dk" id="drop-txt">
+                                        <div class="drop-txt">
+                                            <li><i class="fal fa-user-slash"></i>Block User</li>
+                                            <li><i class="fal fa-eye-slash"></i>Hide Post</li>
+                                            <li><i class="fas fa-flag"></i>Report Post</li>
+                                            <li><i class="fal fa-ban"></i>Report User</li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="body has-pic">
@@ -391,6 +509,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- User Post 005 -->
                 <div class="card">
                     <div class="top">
                         <div class="user-info">
@@ -404,7 +523,33 @@
                         </div>  
                         <div class="menu">
                             <div class="far fa-user-plus" onclick="follow(this)"></div>
-                            <div class="far fa-ellipsis-v" onclick="showPop()"></div>
+                            <div class="dk">
+                                <div class="far fa-ellipsis-v" onclick="showPop(); toggle_menu(this)">
+                                    <div class="pop-dk dk" id="drop-txt">
+                                        <div class="drop-txt">
+                                            <li><i class="fal fa-user-slash"></i>Block User</li>
+                                            <li><i class="fal fa-eye-slash"></i>Hide Post</li>
+                                            <li><i class="fas fa-flag"></i>Report Post</li>
+                                            <li><i class="fal fa-ban"></i>Report User</li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb">
+                                <div class="far fa-ellipsis-v" onclick="showPop();"></div>
+                            </div>
+                            <div class="tb">
+                                <div class="far fa-ellipsis-v" onclick="showPop(); toggle_menu(this)">
+                                    <div class="pop-dk dk" id="drop-txt">
+                                        <div class="drop-txt">
+                                            <li><i class="fal fa-user-slash"></i>Block User</li>
+                                            <li><i class="fal fa-eye-slash"></i>Hide Post</li>
+                                            <li><i class="fas fa-flag"></i>Report Post</li>
+                                            <li><i class="fal fa-ban"></i>Report User</li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="body has-pic">
@@ -439,13 +584,13 @@
                         </div>
                     </div>
                 </div>
+                <!-- Post Section End Text -->
                 <center><p class="fa-sm" style="font-size: .7rem; padding: 10px;"><b>You've Reach the end...</b></p></center>
-                <br>
-                <br>
             </div>
         </section>
-        <!-- Main Comment Section -->
+        <!-- Main Search Section (i was too lazy to rename this section properly...haha) -->
         <section class="comment-section gen" id="sec-find">
+            <!-- Search Seaction Top Search Area -->
             <div class="top">
                 <div class="search">
                     <i class="fal fa-search"></i>
@@ -455,6 +600,7 @@
                     </div>
                 </div>
             </div>
+            <!-- Search Found Area-->
             <div class="body">
                 <!-- You Might Like Section Before actual search -->
                 <div class="yml">
@@ -713,6 +859,14 @@
         </div>
     </div>
     <script>        
+        var ball = document.getElementById("sw-ico");
+        if (currState == 0) {
+            if (ball.classList.contains("fa-moon")) {
+                ball.classList.replace("fa-moon", "fa-sun");
+            }else{
+                ball.classList.replace("fa-sun", "fa-moon");
+            }
+        }
         // Alert Management
         var div_Alert = document.getElementById('alert');
 

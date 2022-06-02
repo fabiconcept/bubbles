@@ -154,6 +154,28 @@ i{
     background-color: var(--white);
 }
 
+.mode{
+    position: fixed;
+    bottom: 20%;
+    gap: 10px;
+    right: 23%;
+    z-index: 10;
+    display: grid;
+}
+.mode i{
+    cursor: pointer;
+    background-color: var(--black);
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--white);
+}
+.mode:hover{
+    color: var(--blue);
+}
 .side::-webkit-scrollbar{
     display: none;
 }
@@ -1290,6 +1312,7 @@ i{
 /* Post Page Styling */
 .post-page{
     display: grid;
+    position: relative;
     font-weight: 600;
     grid-template-columns: .3fr 1fr .4fr;
     grid-template-areas: "activity main search";
@@ -1351,7 +1374,7 @@ i{
 }
 .post-page .trend-section .card li{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     transition: .5s ease-in-out;
     gap: 10px;
@@ -1610,6 +1633,7 @@ i{
 
 .post-page .post-section .card .top .menu{
     display: flex;
+    position: relative;
     gap: 1rem;
     padding: 0 10px;
 }
@@ -2151,26 +2175,31 @@ i{
 }
 
 .comment-page .post-section .card .top .menu{
-    display: flex;
+    display: flex;    
+    position: relative;
+    gap: 1rem;
     padding: 0 10px;
-    flex-direction: row-reverse;
+}
+.pop-dk{
+    position: absolute;
+    right: 15%;
+    top: 150%;
+    width: 9.5rem;
+    display: none;
 }
 .drop-txt{
-    position: absolute;
     background-color: var(--back);
     border: 1px solid var(--light-gray);
     list-style-type: none;
-    display: none;
     font-size: .9rem;
     box-shadow: var(--shadow);
-    margin-left: -10px;
-    margin-right: 10px;
 }
 .drop-txt li{
     background-color: var(--tab-cover);
     padding: 10px 20px;
     display: flex;
     align-items: center;
+    color: var(--gray);
     gap: 5px;
     cursor: pointer;
 }
@@ -2179,11 +2208,11 @@ i{
     color: var(--blue);
     font-weight: 600;
 }
-.comment-page .post-section .card .top .menu .el{
+.comment-page .post-section .card .top .menu div{
     color: var(--gray);
     cursor: pointer;
 }
-.comment-page .post-section .card .top .menu .el:hover{
+.comment-page .post-section .card .top .menu div{
     color: var(--blue);
 }
 .comment-page .post-section .card .body{
@@ -2940,7 +2969,8 @@ i{
 }
 
 .profile-page .post-section .card .top .menu{
-    display: flex;
+    display: flex;    
+    position: relative;
     gap: 1rem;
     padding: 0 10px;
 }
@@ -3619,6 +3649,9 @@ i{
 
 /* Tablet view */
 @media screen and (max-width: 1100px) {
+    .background{
+        display: none;
+    }
     .tb{
         display: block;
     }
@@ -3738,6 +3771,9 @@ i{
 @media screen and (max-width: 640px) {
     body{
         overflow-x: hidden;
+    }
+    .background{
+        display: none;
     }
     .chat-page{
         grid-template-columns: 1fr;
@@ -4067,7 +4103,7 @@ i{
         text-align: center;
     }
     .log .form .form-group{
-        background-color: var(--white);
+        background-color: var(--tab-cover);
         width: 100%;
         padding: 4rem 1rem;
         box-shadow: 0 10px 20px 2px rgba(0, 0, 0, 0.08);
@@ -4296,6 +4332,10 @@ i{
     }
     .gen .body::-webkit-scrollbar{
         display: none;
+    }
+    .mode{
+        bottom: 15%;
+        right: 2rem;
     }
     /* continue */
 
