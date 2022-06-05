@@ -8,19 +8,25 @@ var rootColors = getComputedStyle(root);
 // Set Dark mode
 setInterval(() => {
     let dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    if (currmode == false) {
+    if (getCookie('currmode') == 'true') {
+        if (getCookie('darkmode') =='light') {
+            isLight()
+        }else{
+            isDark()
+        }
+    }else if (getCookie('currmode') == false || typeof getCookie('currmode') =='undefined') {
         if (dark) {
             isDark(); 
-            currState = 1;
         }else{
             isLight();
-            currState = 0;
         }
     }
+    
 }, 500);
-
 // Set Dark Mode
 function isDark() {
+    setCookie("darkmode", "dark", 2);
+    currState = 1;
     root.style.setProperty("--back", "#1c1922");
     root.style.setProperty("--back-chat", "#292a304d");
     root.style.setProperty("--overlay", "rgba(0, 0, 0, 0.075)");
@@ -33,7 +39,10 @@ function isDark() {
 }
 // Set Light Mode
 function isLight() {
+    setCookie("darkmode", "light", 2);
+    currState = 0;
     root.style.setProperty("--back", "#eee");
+    root.style.setProperty("--back-chat", "#f3f0f0c0    ");
     root.style.setProperty("--overlay", "rgba(255, 255, 255, 0.075)");
     root.style.setProperty("--send", "rgb(223, 223, 223)");
     root.style.setProperty("--white", "#fff");
@@ -436,4 +445,51 @@ function manual_Switch() {
         isLight()
     }
     currmode = !currmode;
+    setCookie("currmode", currmode, 2);
+}
+function togPost(params) {
+    var div = document.getElementById('all-txt')
+    var div2 = document.getElementById('pic-only')
+    if (params == "all-txt") {
+        div2.style.display = "none";
+        div.style.display = "block";
+    }else{
+        div2.style.display = "block";
+        div.style.display = "none";
+    }
+}
+
+// When Post Image Clicked
+function openImage(){
+    var openImage = document.getElementById('openImage');
+    openImage.classList.replace("hide", "slide");
+    var firstImage = document.getElementById('firstImage');
+}
+function closeImage(){
+    var openImage = document.getElementById('openImage');
+    openImage.classList.replace("slide", "hide");
+}
+
+// Create Cookie o store Darkmode State
+function setCookie(cname, cvalue, exdate) {
+    const d = new Date();
+    d.setTime(d.getTime() + exdate*24*60*60*1000);
+    let expired = "expires " + d.toString();
+    document.cookie = cname + "=" + cvalue + ";" + exdate + ";path=/";
+}
+
+function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
 }

@@ -26,6 +26,9 @@
                 <span class="active" onclick="tg()" id="tg-ms">Messages</span>
                 <span id="tg-cn" onclick="tg()">Contacts</span>
             </div>
+            <div class="mode">
+                <i class="fal fa-lg fa-moon" onclick="manual_Switch()" id="sw-ico"></i>
+            </div>
 
             <div class="favourite">
                 <p>Active</p>
@@ -736,6 +739,18 @@
 
     </div>
     <script>
+        var ball = document.getElementById("sw-ico");
+        setInterval(() => {
+            if (currState == 1) {
+                if (ball.classList.contains("fa-moon")) {
+                    ball.classList.replace("fa-moon", "fa-sun");
+                }
+            }else{
+                if (ball.classList.contains("fa-sun")) {
+                    ball.classList.replace("fa-sun", "fa-moon");
+                }
+            }
+        }, 200);
         var bt1 = document.getElementById('bt-good');
         var bt2 = document.getElementById('bt-bad');
         // Close Alert 

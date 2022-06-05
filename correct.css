@@ -36,7 +36,6 @@
     width: 100%;
     background-color: var(--white);
     list-style: none;
-    transition: .5s ease-in-out;
     display: grid;
     font-size: .9rem;
     border-radius: .5rem;
@@ -122,3 +121,199 @@
 }
 /* Post Page (Trend Section) End*/
 
+/* Styling the story Section */
+.stories{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    gap: 10px;
+    padding: 0px 0px 10px 0px;
+    overflow-x: auto;
+}
+.stories::-webkit-scrollbar{
+    display: none;
+}
+.stories .story{
+    min-height: 11rem;
+    min-width: 8.23rem;
+    max-height: 11rem;
+    max-width: 8.23rem;
+    cursor: pointer;
+    background-color: var(--tab-cover);
+    border-radius: .4rem;
+    border: 1px solid var(--light-gray);
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.stories .story img{
+    width: 100%;
+}
+.stories .story span{
+    position: absolute;
+    display: grid;
+    height: 11rem;
+    width: 8rem;
+    padding: 10px 5px;
+    color: var(--t-white);
+}
+.stories .story span .numOfPost{
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 1rem;
+}
+.stories .story span .numOfPost p{
+    padding: 2.5px 5px;
+    height: fit-content;
+    font-size: .9rem;
+    border-radius: .4rem;
+    background-color: var(--blue);
+}
+.stories .story span .username{
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    font-size: .9rem;
+}
+.stories .story span .username  p{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.stories .story span .username  p i{
+    font-size: .8rem;
+    /* color: var(--blue); */
+    font-weight: 900;
+}
+
+.stories .story span .username  p t{
+    max-width: 6    rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+.stories .story:nth-child(1){
+    cursor: default;
+    display: grid;
+    grid-template-rows: 1fr .4fr;
+}
+.stories .story:nth-child(1) .usp{
+    height: 7rem;
+    overflow: hidden;
+}
+.stories .story:nth-child(1) .txt{
+    background-color: var(--white);
+    display: flex;
+    height: 3.7rem;
+    align-items: center;
+    flex-direction: column;
+}
+.stories .story:nth-child(1) .txt i{
+    background-color: var(--blue);
+    color: var(--t-white);
+    font-size: .9rem;
+    margin-top: -.7rem;
+    cursor: pointer;
+    width: 1.5rem;
+    border: 2px solid var(--white);
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.my-story-card{
+    padding-top: 10px;
+    padding-left: 5px;
+    border-radius: .4rem;
+    padding-right: 5px;
+    background-color: var(--white);
+    margin-bottom: 5px;
+}
+
+.my-story-card p{
+    padding: 10px 5px;
+    font-size: .9rem;
+    text-transform: uppercase;
+}
+
+.slide-post-type{
+    display: flex;
+}
+.slide-post-type .all-post .line-tag{
+    width: 100%;
+    display: flex;
+}
+.slide-post-type .all-post:nth-child(1){
+    width: 100%;
+}
+.slide-post-type .all-post:nth-child(2){
+    display: none;
+}
+.slide-post-type .all-post:nth-child(2) .line-tag{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.slide-post-type .all-post:nth-child(1) .line-tag .line{
+    height: .25rem;
+    width: 50%;
+    background-color: var(--blue);
+}
+.slide-post-type .all-post:nth-child(2) .line-tag .line{
+    height: .25rem;
+    width: 50%;
+    background-color: var(--blue);
+}
+
+.mark-tag{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    list-style: none;
+    background-color: var(--white);
+    text-align: center;
+}
+
+.mark-tag li{
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+.grid-pic{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2.5px;
+}
+
+.grid-pic .grid{
+    height: calc(14rem*1.5);
+    border: 1px solid var(--light-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.grid-pic .grid img{
+    max-width: 120%;
+    min-height: 100%;
+}
+
+@media screen and (max-width: 640px) {
+    .grid-pic .grid{
+        height: 9rem;
+    }
+    .stories{
+        gap: 5px;
+        margin-bottom: 5px;
+    }   
+}

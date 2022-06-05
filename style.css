@@ -131,9 +131,6 @@ input{
     color: var(--black);
     background-color: transparent;
 }
-i{
-    transition: .5s ease-in-out;
-}
 .chat-page{
     display: grid;
     grid-template-columns: .2fr 1fr;
@@ -147,7 +144,7 @@ i{
 
 /* Side Section Top Div Styles */
 .side{
-    transition: .5s ease-in-out;
+    
     height: 97.5vh;
     width: 20rem;
     padding: 10px;
@@ -236,7 +233,7 @@ i{
     width: 100%;
     font-weight: 600;
     cursor: pointer;
-    transition: .5s ease-in-out;
+    
     padding: 10px;
     font-size: .9rem;
     display: flex;
@@ -406,7 +403,7 @@ i{
 .side .card .container .tab{
     display: flex;
     cursor: pointer;
-    transition: .5s ease-in-out;
+    
     align-items: center;
     gap: 20px;
     padding: 10px 5px;
@@ -522,7 +519,7 @@ i{
     flex: 1;
     height: 97.5vh;
     border-radius: .5rem;
-    transition: .5s ease-in-out;
+    
     box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.1);
     background-color: var(--white);
     padding: 5px;
@@ -622,7 +619,7 @@ i{
     width: 0px;
     margin-left: -.6rem;
     border-top: 1rem solid transparent;
-    transition: .5s ease-in-out;
+    
     border-left: 1rem solid var(--bub-blue);
     border-bottom: 0px solid transparent;
 }
@@ -636,7 +633,7 @@ i{
     max-width: 30rem;
     background-color: var(--bub-blue);
     border-radius: .5rem;
-    transition: .5s ease-in-out;
+    
     font-size: 1.15rem;
     color: var(--white);
     margin-right: 0;
@@ -740,7 +737,7 @@ i{
 }
 .chat-box .message-in .txt .bubble .ex{
     height: 0px;
-    transition: .5s ease-in-out;
+    
     width: 0px;
     margin-right: -.6rem;
     border-top: 1rem solid transparent;
@@ -759,7 +756,7 @@ i{
     max-width: 30rem;
     background-color: var(--light-gray);
     border-radius: .5rem;
-    transition: .5s ease-in-out;
+    
     font-size: 1.15rem;
     color: var(--black);
     margin-left: 0;
@@ -998,7 +995,7 @@ i{
     border-radius: 50%;
     width: 18px;
     margin-right: -1rem;
-    transition: .5s ease-in-out;
+    
     background-color: var(--t-white);
     box-shadow: 0 0 5px 0px var(--gray);
 }
@@ -1090,7 +1087,7 @@ i{
 
 .info .files .file-ls li{
     display: flex;
-    transition: .5s ease-in-out;    
+        
     align-items: center;
     gap: 10px;
     padding: 10px;
@@ -1275,7 +1272,7 @@ i{
     font-size: 1.2rem;
     font-weight: 600;
     color: var(--white);
-    transition: .5s ease-in-out;
+    
     border-radius: .3rem;
     background-color: var(--black);
     margin: 10px 0;
@@ -1352,7 +1349,7 @@ i{
     width: 100%;
     background-color: var(--white);
     list-style: none;
-    transition: .5s ease-in-out;
+    
     display: grid;
     font-size: .9rem;
     border-radius: .5rem;
@@ -1376,7 +1373,7 @@ i{
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    transition: .5s ease-in-out;
+    
     gap: 10px;
     padding: .4rem;
 }
@@ -1416,7 +1413,7 @@ i{
 .post-page .trend-section .card li .state{
     padding: 5px 15px;
     border-radius: .25rem;
-    transition: .5s ease-in-out;
+    
     text-transform: capitalize;
     font-size: small;
     cursor: pointer;
@@ -1474,7 +1471,7 @@ i{
     background-color: var(--white);
     cursor: pointer;
     align-items: center;
-    transition: .5s ease-in-out;
+    
     padding: 15px 10px;
     border-bottom: 2px solid var(--light-gray);
     justify-content: center;
@@ -1583,6 +1580,7 @@ i{
 }
 .post-page .post-section .card .top{
     padding: 15px 10px;
+    border-bottom: 1px solid var(--light-gray);
     background-color: var(--white);
     width: 100%;
     display: flex;
@@ -1634,13 +1632,14 @@ i{
 .post-page .post-section .card .top .menu{
     display: flex;
     position: relative;
+    align-items: center;
     gap: 1rem;
     padding: 0 10px;
 }
 
 .post-page .post-section .card .top .menu div{
     color: var(--gray);
-    transition: .5s ease-in-out;
+    
     cursor: pointer;
 }
 .post-page .post-section .card .top .menu div:hover{
@@ -1815,7 +1814,7 @@ i{
 }
 .post-page .comment-section .top i{
     cursor: pointer;
-    transition: .5s ease-in-out;
+    
 }
 .post-page .comment-section .top i:hover{
     color: var(--blue);
@@ -1841,7 +1840,7 @@ i{
 }
 .post-page .comment-section .form i{
     font-size: 1.2rem;
-    transition: .5s ease-in-out;
+    
     cursor: pointer;
 }
 .post-page .comment-section .form i:hover{
@@ -2018,7 +2017,7 @@ i{
     background-color: var(--white);
     cursor: pointer;
     align-items: center;
-    transition: .5s ease-in-out;
+    
     padding: 15px 10px;
     border-bottom: 2px solid var(--light-gray);
     justify-content: center;
@@ -2463,7 +2462,7 @@ i{
 }
 .comment-page .comment-section .top i{
     cursor: pointer;
-    transition: .5s ease-in-out;
+    
 }
 .comment-page .comment-section .top i:hover{
     color: var(--blue);
@@ -2489,7 +2488,7 @@ i{
 }
 .comment-page .comment-section .form i{
     font-size: 1.2rem;
-    transition: .5s ease-in-out;
+    
     cursor: pointer;
 }
 .comment-page .comment-section .form i:hover{
@@ -2720,7 +2719,7 @@ i{
     background-color: var(--white);
     cursor: pointer;
     align-items: center;
-    transition: .5s ease-in-out;
+    
     padding: 15px 10px;
     border-bottom: 2px solid var(--light-gray);
     justify-content: center;
@@ -2773,7 +2772,6 @@ i{
 }
 .profile-page .post-section .user-card .top-part .profile-photo .at{
     font-weight: 900;
-    cursor: pointer;
 }
 .profile-page .post-section .user-card .top-part .profile-photo .usp{
     height: 7rem;
@@ -2826,6 +2824,7 @@ i{
 .profile-page .post-section .user-card .user-details .buttons .btn{
     padding: .7rem 1rem;
     border-radius: .2rem;
+    cursor: pointer;
     border: 1px solid var(--light-gray);
 }
 .profile-page .post-section .user-card .user-details .buttons .btn:hover{
@@ -2835,6 +2834,7 @@ i{
 .profile-page .post-section .user-card .user-details .bio{
     text-align: center;
     margin-top: 10px;
+    max-width: 80%;
     font-size: .9rem;
 }
 .profile-page .post-section .card{
@@ -2977,7 +2977,7 @@ i{
 
 .profile-page .post-section .card .top .menu div{
     color: var(--gray);
-    transition: .5s ease-in-out;
+    
     cursor: pointer;
 }
 .profile-page .post-section .card .top .menu div:hover{
@@ -3125,6 +3125,7 @@ i{
 .profile-page .comment-section .post-section .card .top{
     height: 2.5rem;
     padding: 10px;
+    border-bottom: 1px solid var(--light-gray);
     display: flex;
     align-items: center;
 }
@@ -3152,7 +3153,7 @@ i{
 }
 .profile-page .comment-section .top i{
     cursor: pointer;
-    transition: .5s ease-in-out;
+    
 }
 .profile-page .comment-section .top i:hover{
     color: var(--blue);
@@ -3178,7 +3179,7 @@ i{
 }
 .profile-page .comment-section .form i{
     font-size: 1.2rem;
-    transition: .5s ease-in-out;
+    
     cursor: pointer;
 }
 .profile-page .comment-section .form i:hover{
@@ -3483,8 +3484,8 @@ i{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 105vh;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
     background-color: var(--overlay);
     backdrop-filter: blur(5px);
@@ -3494,18 +3495,23 @@ i{
     width: 40rem;
     border-radius: .4rem;
     background-color: var(--white);
-    padding: 10px;
     box-shadow: 0 10px 20px 2px rgba(0, 0, 0, 0.1);
-    display: block;
+    display: flex;
     height: fit-content;
-    overflow: hidden;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+}
+.slide-boxes::-webkit-scrollbar{
+    display: none;
 }
 .slide-boxes .slide-box{
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
     width: 100%;
+}
+.slide-boxes .slide-box:nth-child(1){
+
 }
 .slide .cans{
     color: var(--red);
@@ -3517,6 +3523,7 @@ i{
 .guide{
     display: flex;
     flex-direction: column;
+    height: 80%;
 }
 
 .guide .engagement{
@@ -3549,7 +3556,8 @@ i{
     color: var(--red);
 }
 .slide-boxes .slide-box img{
-    width: 100%;
+    scroll-snap-align: start;
+width: 100%;
 }
 .slide-boxes .slide-box:nth-child(2){
     display: none;

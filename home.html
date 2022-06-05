@@ -22,7 +22,7 @@
             <div class="logo"><span>B</span> <p>ubbles</p></div>
             <i class="fad fa-user" onclick="linkTo('active-user.html'); linkGen('active-user.html')"></i>
         </div>
-    </div>
+    </div> 
 
     <!-- Main Page Area -->
     <main class="post-page post-page-hm" id="post-page">
@@ -169,7 +169,6 @@
             <!-- Floating Ball -->
             <div class="mode">
                 <i class="fal fa-lg fa-moon" onclick="manual_Switch()" id="sw-ico"></i>
-                <i class="fal fa-lg fa-square" onclick="fullScreen()"></i>
             </div>
             <!-- Post Section Navigation Mobile Only -->
             <div class="hold mb">
@@ -198,6 +197,7 @@
             </div>
             <!-- Post Section Post Scroll Hold -->
             <div class="scroll" id="sec-post">
+                    
                 <!-- First Card for Creating Post -->
                 <div class="card create-post">
                     <div class="topper">
@@ -219,6 +219,53 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                 <!-- Story Section -->
+                 <div class="stories">
+                    <li class="story">
+                        <div class="usp">
+                            <img src="img/red_angry_bird_by_scooterek-d4hy5b4.jpg" alt="">
+                        </div>
+                        <div class="txt">
+                            <i class="far fa-plus"></i>
+                            <p>Post a story</p>
+                        </div>
+                    </li>
+                    <li class="story">
+                        <img src="img/nomSmall/pexels-gustavo-almeida-7990888.jpg" alt="">
+                        <span>
+                            <div class="numOfPost"><p>1</p></div>
+                            <div class="username"><p><t>@angrybird</t> <i class="far fa-badge-check"></i></p></div>
+                        </span>
+                    </li>
+                    <li class="story">
+                        <img src="img/nomSmall/pexels-gustavo-almeida-8335823.jpg" alt="">
+                        <span>
+                            <div class="numOfPost"><p>4</p></div>
+                            <div class="username"><p><t>@cryptodoyen</t> <i class="far fa-badge-check"></i></p></div>
+                        </span>
+                    </li>
+                    <li class="story">
+                        <img src="img/nomSmall/pexels-lisa-fotios-11404736.jpg" alt="">
+                        <span>
+                            <div class="numOfPost"><p>2</p></div>
+                            <div class="username"><p><t>@locoskp </t><i class="far fa-badge-check"></i></p></div>
+                        </span>
+                    </li>
+                    <li class="story">
+                        <img src="img/nomSmall/pexels-monica-turlui-7851632.jpg" alt="">
+                        <span>
+                            <div class="numOfPost"><p>1</p></div>
+                            <div class="username"><p><t>@froshvibes</t> <i class="far fa-badge-check"></i></p></div>
+                        </span>
+                    </li>
+                    <li class="story">
+                        <img src="img/nomSmall/pexels-ketut-subiyanto-4758294.jpg" alt="">
+                        <span>
+                            <div class="numOfPost"><p>3</p></div>
+                            <div class="username"><t>@laurenalien</t></div>
+                        </span>
+                    </li>
                 </div>
                 <!-- User Post 001 -->
                 <div class="card">
@@ -335,7 +382,7 @@
                     <div class="body has-pic">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, beatae non sit in nihil atque hic labore mollitia dignissimos, assumenda, provident eius. Error dolore architecto voluptates earum non voluptatem nihil in. Voluptatibus asperiores tempore animi cupiditate voluptates porro quidem temporibus?</p>
                         <div class="pictures">
-                            <div class="slide-post">
+                            <div class="slide-post" onclick="openImage()">
                                 <div class="pic"><img src="img/harry-potter_4x.webp" alt=""></div>
                                 <div class="pic"><img src="img/8837a0ae1265548e27a2b2bb3ab1f366.webp" alt=""></div>
                                 <div class="pic"><img src="img/92507bdcf4b5edfa12d5e9cc4f01b301.webp" alt=""></div>
@@ -756,12 +803,15 @@
         </section>
 
         <!-- When Post image is clicked -->
-        <!-- <div class="slide">
+        <div class="hide" id="openImage">
             <div class="guide">
-                <i class="far fa-lg fa-times cans"></i>
+                <i class="far fa-lg fa-times cans" onclick="closeImage()"></i>
                 <div class="slide-boxes">
                     <div class="slide-box">
-                        <img src="img/FG_WfgKVIAEtAGI.jpg" alt="">
+                        <img src="img/harry-potter_4x.webp" alt="" id="firstImage">
+                        <img src="img/8f5081c61937bdd35e92beab23d4608f.webp" alt="">
+                        <img src="img/8837a0ae1265548e27a2b2bb3ab1f366.webp" alt="">
+                        <img src="img/5293c76d8ccc758cb7c7cf3117d42996.webp" alt="">
                     </div>
                     <div class="slide-box"></div>
                     <div class="slide-box"></div>
@@ -777,7 +827,7 @@
                 <i class="far fa-lg fa-angle-left" onclick="test()"></i>
                 <i class="far fa-lg fa-angle-right"></i>
             </div>
-        </div> -->
+        </div>
 
         <!-- <div class="slide">
             <div class="guide">
@@ -860,13 +910,17 @@
     </div>
     <script>        
         var ball = document.getElementById("sw-ico");
-        if (currState == 0) {
-            if (ball.classList.contains("fa-moon")) {
-                ball.classList.replace("fa-moon", "fa-sun");
+        setInterval(() => {
+            if (currState == 1) {
+                if (ball.classList.contains("fa-moon")) {
+                    ball.classList.replace("fa-moon", "fa-sun");
+                }
             }else{
-                ball.classList.replace("fa-sun", "fa-moon");
+                if (ball.classList.contains("fa-sun")) {
+                    ball.classList.replace("fa-sun", "fa-moon");
+                }
             }
-        }
+        }, 200);
         // Alert Management
         var div_Alert = document.getElementById('alert');
 
