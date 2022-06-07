@@ -718,16 +718,17 @@
 
         <div class="hide" id="alert">
             <div class="house">
-                <div class="shell">
-                    <div class="alert-title">
-                        Block User ("Rue <i class="fa fa-heart t-pink"></i>")
-                    </div>
-                    <div class="alert-body">
-                        Are your sure you want to block Her? 
-                    </div>
-                    <div class="buttom">
-                        <div class="btn t-blue" id="bt-good">Cancel</div>
-                        <div class="btn t-red" id="bt-bad">proceed</div>
+                <div class="alert" id="alert">
+                    <div class="shell">
+                        <div class="alert-title">
+                            Wi-Fi ("Bad Connection!")
+                        </div>
+                        <div class="alert-body">
+                            To use Bubble, please turn on mobile data or connect to a Wi-Fi.
+                        </div>
+                        <div class="buttom">
+                            <div class="btn t-blue" id="bt-good">Cancel</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -753,7 +754,7 @@
         // Close Alert 
         function close(params) {
             var div = document.getElementById(params);
-            div.style.display = "none";
+            div.classList.replace("alert", "hide");
         }
 
         bt1.addEventListener('click', ()=>{

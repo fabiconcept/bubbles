@@ -847,7 +847,7 @@
             </div>
         </div> -->
 
-        <!-- <div class="alert" id="alert">
+        <div class="hide" id="alert">
             <div class="shell">
                 <div class="alert-title">
                     Wi-Fi ("Bad Connection!")
@@ -859,7 +859,7 @@
                     <div class="btn t-blue" onclick="closeAlert()">ok</div>
                 </div>
             </div>
-        </div> -->
+        </div>
     </main>
 
     <div class="hide" id="pop1">
@@ -925,7 +925,7 @@
         var div_Alert = document.getElementById('alert');
 
         function closeAlert() {
-            div_Alert.style.display = "none";
+            div_Alert.classList.replace("alert", "hide");
         }
 
         getParameters = (key) =>{

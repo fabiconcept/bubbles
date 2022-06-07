@@ -134,13 +134,6 @@ function backSide() {
     }
 }
 
-// Close Alert 
-var bt1 = document.getElementById('bt-good');
-var bt2 = document.getElementById('bt-bad');
-function close(params) {
-    var div = document.getElementById(params);
-    div.style.display = "none";
-}
 
 // Goto chat section
 
@@ -650,5 +643,30 @@ function hoverPicLeave(params) {
         div_i.classList.remove("hover-pic-i");
         divEnd.classList.remove("hover-pic-leave");
         divEnd.classList.remove("hover-pic");
-    }, 250);
+    }, 500);
+}
+
+function isOffline() {
+    var alertDiv = document.getElementById('alert');
+    if (alertDiv.classList.contains('hide')) {
+        alertDiv.classList.replace('hide', 'alert');
+    }else{
+        if (alertDiv.classList.contains('alert')==false) {
+            alertDiv.classList.add('alert');
+        }
+    }
+}
+
+setInterval(() => {
+    if (navigator.onLine==false){
+        isOffline();
+    }
+}, 5000);
+
+// Close Alert 
+var bt1 = document.getElementById('bt-good');
+var bt2 = document.getElementById('bt-bad');
+function close(params) {
+    var div = document.getElementById(params);
+    div.classList.replace("alert", "hide");
 }
