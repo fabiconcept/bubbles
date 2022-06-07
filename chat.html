@@ -18,7 +18,7 @@
         <!-- Left Side of the chat -->
         <section class="side" id="side">
             <div class="top-side">
-                <div class="logo"><span>B</span> <p>Bubbles</p></div>
+                <div class="logo"><span>B</span> <p>ubbles</p></div>
                 <i class="fal fa-lg fa-arrow-left" onclick="history.back()"></i>
             </div>
 
@@ -718,16 +718,17 @@
 
         <div class="hide" id="alert">
             <div class="house">
-                <div class="shell">
-                    <div class="alert-title">
-                        Block User ("Rue <i class="fa fa-heart t-pink"></i>")
-                    </div>
-                    <div class="alert-body">
-                        Are your sure you want to block Her? 
-                    </div>
-                    <div class="buttom">
-                        <div class="btn t-blue" id="bt-good">Cancel</div>
-                        <div class="btn t-red" id="bt-bad">proceed</div>
+                <div class="alert" id="alert">
+                    <div class="shell">
+                        <div class="alert-title">
+                            Wi-Fi ("Bad Connection!")
+                        </div>
+                        <div class="alert-body">
+                            To use Bubble, please turn on mobile data or connect to a Wi-Fi.
+                        </div>
+                        <div class="buttom">
+                            <div class="btn t-blue" id="bt-good">Cancel</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -736,12 +737,24 @@
 
     </div>
     <script>
+        var ball = document.getElementById("sw-ico");
+        setInterval(() => {
+            if (currState == 1) {
+                if (ball.classList.contains("fa-moon")) {
+                    ball.classList.replace("fa-moon", "fa-sun");
+                }
+            }else{
+                if (ball.classList.contains("fa-sun")) {
+                    ball.classList.replace("fa-sun", "fa-moon");
+                }
+            }
+        }, 200);
         var bt1 = document.getElementById('bt-good');
         var bt2 = document.getElementById('bt-bad');
         // Close Alert 
         function close(params) {
             var div = document.getElementById(params);
-            div.style.display = "none";
+            div.classList.replace("alert", "hide");
         }
 
         bt1.addEventListener('click', ()=>{
