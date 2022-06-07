@@ -3,4 +3,4 @@ Bubbles Social Media Project
 
 
 visit site here:
-https://rawcdn.githack.com/fabiconcept/bubbles/9b19c6805ee866f8a959fb97b9e2acb4d630c267/home.html
+https://rawcdn.githack.com/fabiconcept/bubbles/d12a6388708cf9e72509e7c2f8f40d422c1de10a/home.html
