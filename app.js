@@ -9,19 +9,19 @@ var rootColors = getComputedStyle(root);
 setInterval(() => {
     let dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
     if (getCookie('currmode') == 'true') {
-        if (getCookie('darkmode') =='light') {
+        if (getCookie('darkmode') == 'light') {
             isLight()
-        }else{
+        } else {
             isDark()
         }
-    }else if (getCookie('currmode') == false || typeof getCookie('currmode') =='undefined') {
+    } else if (getCookie('currmode') == false || typeof getCookie('currmode') == 'undefined') {
         if (dark) {
-            isDark(); 
-        }else{
+            isDark();
+        } else {
             isLight();
         }
     }
-    
+
 }, 500);
 // Set Dark Mode
 function isDark() {
@@ -57,12 +57,12 @@ function isLight() {
 function tg_tbn(ele) {
     var tg_btn = document.getElementById(ele);
     tg_btn.classList.toggle('ani-tg-btn');
-    if (tg_btn.classList.contains('ani-tg-btn')==false) {
+    if (tg_btn.classList.contains('ani-tg-btn') == false) {
         tg_btn.classList.add('ani-tg-btn-off');
-        
-    }else{
+
+    } else {
         tg_btn.classList.remove('ani-tg-btn-off');
-        
+
     }
 }
 
@@ -80,7 +80,7 @@ function tg() {
     if (tg_ms.classList.contains('active')) {
         contact.classList.add('hide');
         msg.classList.remove('hide');
-    }else{
+    } else {
         msg.classList.add('hide');
         contact.classList.remove('hide');
     }
@@ -95,23 +95,23 @@ function tg_info() {
     var chatBox = document.getElementById('chat-box');
 
     // On Mobile only
-    if (onDevice=='mobile') {
+    if (onDevice == 'mobile') {
         info.classList.toggle('hide');
 
         if (info.classList.contains("hide")) {
             chatBox.style.display = "block";
             chatBox.classList.add('open');
-            chatBox.addEventListener('animationend', ()=>{
+            chatBox.addEventListener('animationend', () => {
                 chatBox.classList.remove('next-div');
             })
-        }else{
+        } else {
             chatBox.style.display = "none";
             info.classList.add('open');
-            info.addEventListener('animationend', ()=>{
+            info.addEventListener('animationend', () => {
                 info.classList.remove('open');
             })
         }
-    }else{
+    } else {
         info.classList.toggle('hide');
     }
 }
@@ -123,12 +123,12 @@ function backSide() {
     var chat = document.getElementById("chat");
 
     // On Mobile only
-    if (onDevice=='mobile') {
+    if (onDevice == 'mobile') {
         sideSec.style.display = "block";
         chat.style.display = "none";
 
         sideSec.classList.add('open');
-        sideSec.addEventListener('animationend', ()=>{
+        sideSec.addEventListener('animationend', () => {
             sideSec.classList.remove('open');
         })
     }
@@ -148,7 +148,7 @@ function open_message() {
     // On Mobile only
     var inp = document.getElementById('txt-msg');
     inp.focus();
-    if (onDevice=='mobile') {
+    if (onDevice == 'mobile') {
         var sideSec = document.getElementById("side");
         var chat = document.getElementById("chat");
 
@@ -156,7 +156,7 @@ function open_message() {
         chat.style.display = "grid";
 
         chat.classList.add('open');
-        chat.addEventListener('animationend', ()=>{
+        chat.addEventListener('animationend', () => {
             chat.classList.remove('open');
         })
     }
@@ -166,13 +166,13 @@ function open_message() {
 
 // Hide Pop
 function hidePop() {
-    if (onDevice=="mobile") {
+    if (onDevice == "mobile") {
         var div_Ani = document.getElementById('pop-sm');
         var div_Bac = document.getElementById('pop2');
         div_Ani.classList.add('pop-D');
         setTimeout(() => {
             div_Ani.classList.remove('pop-D');
-            div_Bac.classList.replace('mb','hide');
+            div_Bac.classList.replace('mb', 'hide');
         }, 550);
     }
 }
@@ -183,14 +183,14 @@ function hidePop1() {
         div_Ani.classList.add('pop-D');
         setTimeout(() => {
             div_Ani.classList.remove('pop-D');
-            div_Bac.classList.replace('mb','hide');
+            div_Bac.classList.replace('mb', 'hide');
         }, 550);
     }
 }
 
 // Show Pop
 function showPop() {
-    if (onDevice=='mobile') {
+    if (onDevice == 'mobile') {
         var div_Ani = document.getElementById('pop-sm');
         var div_Bac = document.getElementById('pop2');
         div_Ani.classList.add('pop-U');
@@ -202,7 +202,7 @@ function showPop() {
 }
 
 function showPop1() {
-    if (onDevice=='mobile') {
+    if (onDevice == 'mobile') {
         var div_Ani = document.getElementById('pop-share');
         var div_Bac = document.getElementById('pop1');
         div_Ani.classList.add('pop-U');
@@ -216,7 +216,7 @@ function showPop1() {
 
 // Link Pages
 function linkTo(params) {
-    if (onDevice=='mobile') {
+    if (onDevice == 'mobile') {
         setTimeout(() => {
             location.href = params;
         }, 200);
@@ -244,36 +244,36 @@ function linkToTb(params) {
         div.classList.remove('post-page-tb-alt');
         moveTab(1);
     }
-}   
+}
 // Follow animation
 function follow(ele) {
-    if (ele.classList.contains('fa-user-plus')==true) {
+    if (ele.classList.contains('fa-user-plus') == true) {
         ele.classList.add("follow");
         ele.style.color = "var(--green)";
-        ele.addEventListener('animationend', ()=>{
+        ele.addEventListener('animationend', () => {
             ele.classList.replace('fa-user-plus', 'fa-user-check');
             ele.classList.remove("follow");
         })
-    }else if (ele.classList.contains('fa-user-check')==true) {
+    } else if (ele.classList.contains('fa-user-check') == true) {
         ele.classList.add("follow");
         ele.style.color = "var(--gray)";
-        ele.addEventListener('animationend', ()=>{
+        ele.addEventListener('animationend', () => {
             ele.classList.replace("fa-user-check", "fa-user-plus");
             ele.classList.remove("follow");
-        })                
+        })
     }
 }
 
 // Button Click Animation
 function aniBtn(ele) {
     ele.classList.add("follow");
-    ele.addEventListener('animationend', ()=>{
+    ele.addEventListener('animationend', () => {
         ele.classList.remove("follow");
     })
 }
 
 // Switch Top Tags
-function moveTab(ele){
+function moveTab(ele) {
     var tabPost = document.getElementById('t-post');
     var tabFollow = document.getElementById('t-follow');
     var tabChat = document.getElementById('t-chat');
@@ -313,50 +313,50 @@ function move(ele) {
     var arrow = document.getElementById('arr');
     var bubInput = document.getElementById('bub-txt');
     var bubIco = document.getElementById('bub-ico');
-    
-    if (ele==1) {
-        if (onDevice=='mobile') {
+
+    if (ele == 1) {
+        if (onDevice == 'mobile') {
             if (arrow.classList.contains('c-post-mob')) {
                 arrow.classList.replace('c-post-mob', 'c-live-mob');
                 bubInput.placeholder = "What's on your mind";
-                bubIco.classList.replace("fa-clock","fa-images");
-            }else{
+                bubIco.classList.replace("fa-clock", "fa-images");
+            } else {
                 arrow.classList.add('c-live-mob');
                 bubInput.placeholder = "What's on your mind";
-                bubIco.classList.replace("fa-clock","fa-images");
+                bubIco.classList.replace("fa-clock", "fa-images");
             }
-        }else{
+        } else {
             if (arrow.classList.contains('c-post')) {
                 arrow.classList.replace('c-post', 'c-live');
                 bubInput.placeholder = "What's on your mind";
-                bubIco.classList.replace("fa-clock","fa-images");
-            }else{
+                bubIco.classList.replace("fa-clock", "fa-images");
+            } else {
                 arrow.classList.add('c-live');
                 bubInput.placeholder = "What's on your mind";
-                bubIco.classList.replace("fa-clock","fa-images");
+                bubIco.classList.replace("fa-clock", "fa-images");
             }
         }
     }
-    if (ele==2) {
-        if (onDevice=='mobile') {
+    if (ele == 2) {
+        if (onDevice == 'mobile') {
             if (arrow.classList.contains('c-live-mob')) {
                 arrow.classList.replace('c-live-mob', 'c-post-mob');
                 bubInput.placeholder = "Drop a bubble";
-                bubIco.classList.replace("fa-images","fa-clock");
-            }else{
+                bubIco.classList.replace("fa-images", "fa-clock");
+            } else {
                 arrow.classList.add('c-post-mob');
                 bubInput.placeholder = "Drop a bubble";
-                bubIco.classList.replace("fa-images","fa-clock");
+                bubIco.classList.replace("fa-images", "fa-clock");
             }
-        }else{
+        } else {
             if (arrow.classList.contains('c-live')) {
                 arrow.classList.replace('c-live', 'c-post');
                 bubInput.placeholder = "Drop a bubble";
-                bubIco.classList.replace("fa-images","fa-clock");
-            }else{
+                bubIco.classList.replace("fa-images", "fa-clock");
+            } else {
                 arrow.classList.add('c-post');
                 bubInput.placeholder = "Drop a bubble";
-                bubIco.classList.replace("fa-images","fa-clock");
+                bubIco.classList.replace("fa-images", "fa-clock");
             }
         }
     }
@@ -364,23 +364,23 @@ function move(ele) {
 function followed(x) {
     var btn = x;
     if (btn.classList.contains('no-follow')) {
-        btn.classList.replace("no-follow","isfollow");
+        btn.classList.replace("no-follow", "isfollow");
         btn.innerHTML = "following";
-    }else if(btn.classList.contains('isfollow')) {
-        btn.classList.replace("isfollow","no-follow");
+    } else if (btn.classList.contains('isfollow')) {
+        btn.classList.replace("isfollow", "no-follow");
         btn.innerHTML = "follow";
-    }else{
+    } else {
         if (btn.innerHTML == 'follow') {
             btn.innerHTML = 'following';
             btn.style.color = "var(--black)";
-        }else{
+        } else {
             btn.style.color = "var(--blue)";
             btn.innerHTML = 'follow';
         }
     }
 }
 
-getParameters = (key) =>{
+getParameters = (key) => {
     address = window.location.search;
     parameterList = new URLSearchParams(address);
     return parameterList.get(key);
@@ -399,9 +399,9 @@ function deactivate(ele) {
 }
 
 function fullScreen() {
-    if (count==0) {
+    if (count == 0) {
         activate(document.documentElement);
-    }else{
+    } else {
         deactivate()
         count = 0;
     }
@@ -413,14 +413,14 @@ function toggle_menu(params) {
     if (con == 0) {
         div.style.display = "grid";
         con++;
-    }else{
+    } else {
         div.style.display = "none";
         con = 0;
     }
 }
 
 function linkGen(params) {
-    if (onDevice !="mobile") {
+    if (onDevice != "mobile") {
         setTimeout(() => {
             location.href = params;
         }, 200);
@@ -432,14 +432,14 @@ function manual_Switch() {
     if (currState == 0) {
         if (ico.classList.contains("fa-sun")) {
             ico.classList.replace("fa-sun", "fa-moon");
-        }else{
+        } else {
             ico.classList.replace("fa-moon", "fa-sun");
         }
         isDark()
-    }else{
+    } else {
         if (ico.classList.contains("fa-moon")) {
             ico.classList.replace("fa-moon", "fa-sun");
-        }else{
+        } else {
             ico.classList.replace("fa-sun", "fa-moon");
         }
         isLight()
@@ -453,19 +453,19 @@ function togPost(params) {
     if (params == "all-txt") {
         div2.style.display = "none";
         div.style.display = "block";
-    }else{
+    } else {
         div2.style.display = "block";
         div.style.display = "none";
     }
 }
 
 // When Post Image Clicked
-function openImage(){
+function openImage() {
     var openImage = document.getElementById('openImage');
     openImage.classList.replace("hide", "slide");
     var firstImage = document.getElementById('firstImage');
 }
-function closeImage(){
+function closeImage() {
     var openImage = document.getElementById('openImage');
     openImage.classList.replace("slide", "hide");
 }
@@ -473,7 +473,7 @@ function closeImage(){
 // Create Cookie o store Darkmode State
 function setCookie(cname, cvalue, exdate) {
     const d = new Date();
-    d.setTime(d.getTime() + exdate*24*60*60*1000);
+    d.setTime(d.getTime() + exdate * 24 * 60 * 60 * 1000);
     let expired = "expires " + d.toString();
     document.cookie = cname + "=" + cvalue + ";" + exdate + ";path=/";
 }
@@ -482,14 +482,173 @@ function getCookie(cname) {
     let name = cname + "=";
     let decodedCookie = decodeURIComponent(document.cookie);
     let ca = decodedCookie.split(';');
-    for(let i = 0; i <ca.length; i++) {
-      let c = ca[i];
-      while (c.charAt(0) == ' ') {
-        c = c.substring(1);
-      }
-      if (c.indexOf(name) == 0) {
-        return c.substring(name.length, c.length);
-      }
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
     }
     return "";
+}
+
+// Image Color Detector (Fetch Color)
+function averageColor(imageElement) {
+
+    // Create the canvas element
+    var canvas
+        = document.createElement('canvas'),
+
+        // Get the 2D context of the canvas
+        context
+            = canvas.getContext &&
+            canvas.getContext('2d'),
+        imgData, width, height,
+        length,
+
+        // Define variables for storing
+        // the individual red, blue and
+        // green colors
+        rgb = { r: 0, g: 0, b: 0 },
+
+        // Define variable for the
+        // total number of colors
+        count = 0;
+
+    // Set the height and width equal
+    // to that of the canvas and the image
+    height = canvas.height =
+        imageElement.naturalHeight ||
+        imageElement.offsetHeight ||
+        imageElement.height;
+    width = canvas.width =
+        imageElement.naturalWidth ||
+        imageElement.offsetWidth ||
+        imageElement.width;
+
+    // Draw the image to the canvas
+    context.drawImage(imageElement, 0, 0);
+
+    // Get the data of the image
+    imgData = context.getImageData(
+        0, 0, width, height);
+
+    // Get the length of image data object
+    length = imgData.data.length;
+
+    for (var i = 0; i < length; i += 4) {
+
+        // Sum all values of red colour
+        rgb.r += imgData.data[i];
+
+        // Sum all values of green colour
+        rgb.g += imgData.data[i + 1];
+
+        // Sum all values of blue colour
+        rgb.b += imgData.data[i + 2];
+
+        // Increment the total number of
+        // values of rgb colours
+        count++;
+    }
+
+    // Find the average of red
+    rgb.r
+        = Math.floor(rgb.r / count);
+
+    // Find the average of green
+    rgb.g
+        = Math.floor(rgb.g / count);
+
+    // Find the average of blue
+    rgb.b
+        = Math.floor(rgb.b / count);
+
+    return rgb;
+}
+
+ // Image Color Detector (Apply Color)
+ function lightOrDark(color) {
+
+    // Variables for red, green, blue values
+    var r, g, b, hsp;
+
+    // Check the format of the color, HEX or RGB?
+    if (color.match(/^rgb/)) {
+
+        // If RGB --> store the red, green, blue values in separate variables
+        color = color.match(/^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d+(?:\.\d+)?))?\)$/);
+
+        r = color[1];
+        g = color[2];
+        b = color[3];
+    }
+    else {
+
+        // If hex --> Convert it to RGB: http://gist.github.com/983661
+        color = +("0x" + color.slice(1).replace(
+            color.length < 5 && /./g, '$&$&'));
+
+        r = color >> 16;
+        g = color >> 8 & 255;
+        b = color & 255;
+    }
+
+    // HSP (Highly Sensitive Poo) equation from http://alienryderflex.com/hsp.html
+    hsp = Math.sqrt(
+        0.299 * (r * r) +
+        0.587 * (g * g) +
+        0.114 * (b * b)
+    );
+
+    // Using the HSP value, determine whether the color is light or dark
+    if (hsp > 127.5) {
+
+        return 'light';
+    }
+    else {
+
+        return 'dark';
+    }
+}
+
+
+// Function to set the background
+// color of the second div as
+// calculated average color of image
+function checkImageColor(ele){
+    var rgb;
+    rgb = averageColor(ele);
+    // Select the element and set its
+    var blockColor = 'rgb(' + rgb.r + ','+ rgb.g + ','+ rgb.b + ')';
+    // background color
+    return lightOrDark(blockColor);
+}
+function imgLight(params) {
+    setTimeout(() => {
+        checkImageColor(params);
+    }, 100)
+}
+
+// Profile Grid Post Hover (mouseEnter)
+function hoverPic(params) {
+    var div = params.children[1];
+    var div_i = params.firstElementChild;
+    if (div.classList.contains('hover-pic')==false) {
+        div.classList.add("hover-pic");
+        div_i.classList.add("hover-pic-i");
+    }
+}
+// Profile Grid Post Hover (mouseLeave)
+function hoverPicLeave(params) {
+    var divEnd = params.children[1];
+    var div_i = params.firstElementChild;
+    divEnd.classList.add("hover-pic-leave");
+    setTimeout(() => {
+        div_i.classList.remove("hover-pic-i");
+        divEnd.classList.remove("hover-pic-leave");
+        divEnd.classList.remove("hover-pic");
+    }, 500);
 }

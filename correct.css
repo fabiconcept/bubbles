@@ -301,8 +301,34 @@
     justify-content: center;
     overflow: hidden;
     cursor: pointer;
+    position: relative;
 }
-
+.grid-pic .grid .hover-cover{
+    position: absolute;
+    height: 100%;
+    color: var(--t-white);
+    background-color: var(--hover-pic);
+    display: flex;
+    top: -100%;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+.hover-pic{
+    animation: hover-pic .25s ease-in-out forwards;
+}
+.hover-pic-leave{
+    animation: hover-pic-leave .25s ease forwards;
+}
+.hover-pic-i{
+    animation: hover-pic-i 1s ease forwards;
+}
+.grid-pic .grid .hover-cover i{
+    font-size: 1.98rem;
+    animation-delay: .25s;
+}
 .grid-pic .grid img{
     max-width: 120%;
     min-height: 100%;
@@ -316,4 +342,40 @@
         gap: 5px;
         margin-bottom: 5px;
     }   
+}
+
+@keyframes hover-pic {
+    from{
+        top: -100%;
+    }
+    to{
+        top: 0%;
+    }
+}
+
+@keyframes hover-pic-leave {
+    from{
+        top: 0%;
+    }
+    to{
+        top: -100%;
+    }
+}
+
+@keyframes hover-pic-i {
+    0%{
+        font-size: 1.98rem;
+    }
+    25%{
+        font-size: 2.25rem;
+    }
+    50%{
+        font-size: 2rem;
+    }
+    75%{
+        font-size: 2.25rem;
+    }
+    100%{
+        font-size: 1.98rem;
+    }
 }
