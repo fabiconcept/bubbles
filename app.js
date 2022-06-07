@@ -650,5 +650,5 @@ function hoverPicLeave(params) {
         div_i.classList.remove("hover-pic-i");
         divEnd.classList.remove("hover-pic-leave");
         divEnd.classList.remove("hover-pic");
-    }, 500);
+    }, 250);
 }
