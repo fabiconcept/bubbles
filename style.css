@@ -1584,6 +1584,7 @@ i{
     display: flex;
     align-items: center;
     scroll-snap-align: start;
+    scroll-snap-stop: always;
     justify-content: center;
     min-width: 43rem;
     max-width: 43rem;
@@ -2149,6 +2150,7 @@ i{
     display: flex;
     align-items: center;
     scroll-snap-align: start;
+    scroll-snap-stop: always;
     justify-content: center;
     min-width: 21rem;
     max-width: 21rem;
@@ -2970,6 +2972,7 @@ i{
     display: flex;
     align-items: center;
     scroll-snap-align: start;
+    scroll-snap-stop: always;
     justify-content: center;
     min-width: 43rem;
     max-width: 43rem;
